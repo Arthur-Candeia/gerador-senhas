@@ -66,9 +66,10 @@ export default function App() {
         <input type="range" name="qtd" id="qtd" onInput={qtdChange} min={1} max={50} step={1} value={qtd}/>
         <label htmlFor="qtd">Qtd: {qtd}</label>
       </div>
-        <span>
-          {password}
-        </span>
+
+      <span>
+        {password}
+      </span>
     </div>
   )
 }

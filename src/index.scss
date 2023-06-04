@@ -15,18 +15,20 @@ body {
 }
 
 .App{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
   width: 95vw;
   max-width: 650px;
   min-height: 250px;
+  padding: 0 10px;
   background-color: #333;
   border-radius: 7px;
 
   h1 {
     font-size: 32px;
+    text-align: center;
     color: white;
   }
 
@@ -51,8 +53,25 @@ body {
   }
 
   span {
-    display: inline-block;
-    height: 15px;
+    display: block;
+    max-height: 15px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 10px;
     color: white;
+  }
+}
+
+@media screen and (max-width: 800px)  {
+  .App > span {
+    font-size: 0.65em;
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .App > span {
+    font-size: 0.5em;
+    min-height: 40px;
   }
 }
